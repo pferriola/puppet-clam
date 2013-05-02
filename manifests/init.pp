@@ -15,7 +15,6 @@ class clam( $email = "root", $scan_directory = "/" )
       mode    => 744,
       owner   => "root",
       group   => "root",
-      #source => "puppet:///modules/clam/usr/local/sbin/clam.sh";
       content => template("clam/clam.sh.erb");
     '/etc/cron.daily/clamscan':
       ensure  => file,
