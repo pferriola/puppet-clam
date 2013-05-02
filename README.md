@@ -6,12 +6,10 @@ installed will be a crontab entry for doing a nightly scan of your system.
 
 ## Usage
 
-  class {
-    clam:
-      email => "username@domain.com",
-      scan_directory  => "/srv/www/";
-  }
+	class {
+		clam:
+			email => "username@domain.com",
+			scan_directory  => "/srv/www/";
+	}
 
 If no parameters are passed, the system will scan / and send an email to root.
-
-
