@@ -1,0 +1,8 @@
+#!/bin/sh
+STAMP=`date +%Y%m%d`
+HOST=`hostname -f`
+
+/bin/rm /tmp/clam_scan_output.txt
+/usr/bin/freshclam --quiet >/dev/null 2>&1
+/usr/bin/clamscan --stdout -i -r <%= scan_directory -%> >> /tmp/clam_scan_output.txt
+/bin/mailx -s "[$HOST] Scan for $STAMP" <%= email -%> < /tmp/clam_scan_output.txt
