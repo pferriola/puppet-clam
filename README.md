@@ -13,3 +13,5 @@ installed will be a crontab entry for doing a nightly scan of your system.
 	}
 
 If no parameters are passed, the system will scan / and send an email to root.
+
+Special thanks to Craig Carnell (https://github.com/craigcarnell) for the Ubuntu support.  
