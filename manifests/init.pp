@@ -1,13 +1,6 @@
 class clam( $email = "root", $scan_directory = "/" )
 {
-  package
-  {
-    'clamav-db':
-      ensure => latest;
-    'clamav':
-      require => Package["clamav-db"],
-      ensure  => latest;
-  } 
+  include clam::package
 
   file {
     '/usr/local/sbin/clam.sh':
