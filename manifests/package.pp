@@ -1,6 +1,6 @@
 class clam::package {
     case $operatingsystem {
-        ubuntu: {
+        debian, ubuntu: {
             include clam::package::debian
         }
         centos: {
