@@ -3,7 +3,7 @@ class clam::package {
         ubuntu: {
             include clam::package::debian
         }
-        centos: {
+        centos, RedHat: {
             include clam::package::redhat
         }
     }
