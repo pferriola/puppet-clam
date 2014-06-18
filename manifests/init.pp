@@ -8,12 +8,14 @@ class clam( $email = "root", $scan_directory = "/" )
       mode    => 744,
       owner   => "root",
       group   => "root",
-      content => template("clam/clam.sh.erb");
+      content => template("clam/clam.sh.erb"),
+      require => Package['clamav'];
     '/etc/cron.daily/clamscan':
       ensure  => file,
       mode    => 755,
       owner   => "root",
       group   => "root",
-      source => "puppet:///modules/clam/etc/cron.daily/clamscan";
+      source => "puppet:///modules/clam/etc/cron.daily/clamscan",
+      require => Package['clamav'];
   }
 }
