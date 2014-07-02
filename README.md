@@ -1,8 +1,9 @@
 # Clam module for Puppet
 
-This module manages clam on Linux (Currently CentOS 5/6 and Ubuntu) distros.  The module
-will install and ensure the latest clam and clamdb have been installed.  Also
-installed will be a crontab entry for doing a nightly scan of your system.  
+This module manages clam on Linux (Currently RHEL, CentOS 5/6, Debian, Ubuntu)
+distros.  The module will install and ensure the latest clam and clamdb have 
+been installed.  Also installed will be a crontab entry for doing a nightly scan
+of your system.  
 
 ## Usage
 
